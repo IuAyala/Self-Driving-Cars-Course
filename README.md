@@ -61,7 +61,7 @@ Set the required environment variables
 - Create variable “WEBOTS_HOME” with content “C:\Program Files\Webots”
 - Create variable “PYTHONPATH” with content “%WEBOTS_HOME%/lib/controller/python3X”
   - Note: Change the last “X” for the minor revision number of your Python version
-- Add to “Path”
+- Add to “PATH”
   - “%WEBOTS_HOME%\lib\controller”
   - “%WEBOTS_HOME%\msys64\mingw64\bin”
   - “%WEBOTS_HOME%\msys64\mingw64\bin\cpp”
