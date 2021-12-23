@@ -10,4 +10,13 @@ This repository stores code for the course: Machine Learning Through Self-Drivin
 
 ## Pre-requisites
 - Install Python
-- Install Visual Studio Code 
+- Install Visual Studio Code
+- Install Python libraries (can be found in 0_install/requirements.txt)
+- Add Envrionment Variables (PYTHONPATH, PYTHONDECODING, ...)
+
+Note: all the installation for *Linux* be done by executing
+```
+cd /path/to/Self-Driving-Cars-Course/0_install
+./install_linux.sh
+```
+
