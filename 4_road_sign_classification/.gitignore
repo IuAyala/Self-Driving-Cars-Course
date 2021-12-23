@@ -3,13 +3,7 @@
 # Learn more about .gitignore:
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
-# Dataset
-original_dataset/
-modified_dataset/
-annotations/
-features/
-images/
-models/
+
 
 # Logs
 logs/

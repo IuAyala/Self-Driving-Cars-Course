@@ -1,3 +1,11 @@
+# Dataset
+original_dataset/
+modified_dataset/
+annotations/
+features/
+images/
+models/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
