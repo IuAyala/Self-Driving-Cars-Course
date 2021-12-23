@@ -1,0 +1,61 @@
+---
+  - hosts: localhost
+    tasks:
+      # Install python
+      - name: Install python (All)
+        become: true
+        package:
+          name:
+            - python3
+            - git
+
+      - name: Install python virtual environment wrapper (Fedora | Ubuntu)
+        become: true
+        when: ansible_distribution == 'Ubuntu' or ansible_distribution == 'Fedora'
+        package:
+          name:
+            - python3-virtualenvwrapper
+
+      - name: Install python virtual environment wrapper (Archlinux)
+        become: true
+        when: ansible_distribution == 'Archlinux'
+        package:
+          name:
+            - python-virtualenvwrapper
+
+      - name: Install virtualenvwrapper in pip3
+        pip:
+          name: virtualenvwrapper
+          executable: pip3
+
+      # - name: Create virtual environment (Ubuntu)
+      #   when: ansible_distribution == 'Ubuntu'
+      #   shell: . /usr/share/virtualenvwrapper/virtualenvwrapper.sh && mkvirtualenv ml
+      #   args:
+      #     executable: /bin/bash
+
+      # - name: Create virtual environment (Archlinux)
+      #   when: ansible_distribution == 'Archlinux'
+      #   shell: . /usr/bin/virtualenvwrapper.sh && mkvirtualenv ml
+      #   args:
+      #     executable: /bin/bash
+
+      - name: Install python libraries
+        pip:
+          requirements: "{{ playbook_dir }}/requirements.txt"
+
+      - name: Add line to .bashrc for PYTHONPATH (Webots libraries)
+        ansible.builtin.lineinfile:
+          path: "{{ ansible_env.HOME }}/.bashrc"
+          line: export PYTHONPATH=${PYTHONPATH:+${PYTHONPATH}:}${WEBOTS_HOME}/lib/controller/python39
+
+      - name: Add line to .bashrc for PYTHONDECODING
+        ansible.builtin.lineinfile:
+          path: "{{ ansible_env.HOME }}/.bashrc"
+          line: export PYTHONIOENCODING=UTF-8
+
+      - name: Add line to .bashrc for LD_LIBRARY_PATH 
+        ansible.builtin.lineinfile:
+          path: "{{ ansible_env.HOME }}/.bashrc"
+          line: export LD_LIBRARY_PATH=${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}:}/usr/local/webots/lib/controller # Add line
+
