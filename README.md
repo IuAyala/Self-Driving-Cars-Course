@@ -47,8 +47,8 @@ cd /path/to/Self-Driving-Cars-Course/0_install
 
 ### Manual Installation Windows
 Install:
-* [Python](https://www.python.org/downloads/)
-* [Visual Studio Code](https://code.visualstudio.com/download)
+- [Python](https://www.python.org/downloads/)
+- [Visual Studio Code](https://code.visualstudio.com/download)
 
 Install the required Python libraries, by running.
 ```
@@ -60,12 +60,12 @@ Set the required environment variables
 - Click the "Windows Key" and write "Edit the system environment variables"
 - Create variable “WEBOTS_HOME” with content “C:\Program Files\Webots”
 - Create variable “PYTHONPATH” with content “%WEBOTS_HOME%/lib/controller/python3X”
-- WARNING: in the documentation says to use ${WEBOTS_HOME}, but doesn’t work
+  - WARNING: in the documentation says to use ${WEBOTS_HOME}, but doesn’t work
 - Change the last “X” for the minor revision number of your Python version
 - Add to “Path”
-- “%WEBOTS_HOME%\lib\controller”
-- “%WEBOTS_HOME%\msys64\mingw64\bin”
-- “%WEBOTS_HOME%\msys64\mingw64\bin\cpp”
+  -  “%WEBOTS_HOME%\lib\controller”
+  - “%WEBOTS_HOME%\msys64\mingw64\bin”
+  - “%WEBOTS_HOME%\msys64\mingw64\bin\cpp”
 
 Create variable “PYTHONIOENCODING” with content “UTF-8”
 
