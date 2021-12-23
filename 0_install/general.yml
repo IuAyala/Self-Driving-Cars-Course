@@ -1,7 +1,7 @@
 ---
   - hosts: localhost
     tasks:
-      # Install python
+      # -------------------- python --------------------
       - name: Install python (All)
         become: true
         package:
@@ -44,6 +44,66 @@
         pip:
           requirements: "{{ playbook_dir }}/requirements.txt"
 
+      # -------------------- code --------------------
+      - name: Microsoft GPG key (CentOS | Fedora)
+        become: true
+        when: ansible_distribution == 'CentOS' or ansible_distribution == 'Fedora'
+        command: rpm --import https://packages.microsoft.com/keys/microsoft.asc
+
+      - name: Add vscode repo (CentOS | Fedora)
+        become: true
+        when: ansible_distribution == 'CentOS' or ansible_distribution == 'Fedora'
+        blockinfile:
+          mode: 0644
+          dest: /etc/yum.repos.d/vscode.repo
+          create: true
+          block: |
+            [code]
+            name=Visual Studio Code
+            baseurl=https://packages.microsoft.com/yumrepos/vscode
+            enabled=1
+            gpgcheck=1
+            gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+
+      - name: Install vscode (Fedora | CentOS)
+        become: true
+        when: ansible_distribution == 'CentOS' or ansible_distribution == 'Fedora'
+        package:
+          name: code
+          state: present
+
+      - name: Get micorosft key (Ubuntu)
+        when: ansible_distribution == 'Ubuntu'
+        shell: wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+        args:
+          chdir: /tmp
+
+      - name: Install dowloaded key (Ubuntu)
+        become: true
+        when: ansible_distribution == 'Ubuntu'
+        command: install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+        args:
+          chdir: /tmp
+
+      - name: Create code.list in source.list.d/ (Ubuntu)
+        become: true
+        when: ansible_distribution == 'Ubuntu'
+        command: sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+
+      # - name: Install code (Ubuntu) through Snap
+      #   become: true
+      #   when: ansible_distribution == 'Ubuntu'
+      #   snap:
+      #     name: code
+      #     classic: yes
+
+      - name: Install code (Archlinux)
+        when: ansible_distribution == 'Archlinux'
+        yay:
+          name: visual-studio-code-bin
+
+
+      # -------------------- Environment Variables --------------------
       - name: Add line to .bashrc for PYTHONPATH (Webots libraries)
         ansible.builtin.lineinfile:
           path: "{{ ansible_env.HOME }}/.bashrc"

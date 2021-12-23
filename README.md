@@ -60,20 +60,19 @@ Set the required environment variables
 - Click the "Windows Key" and write "Edit the system environment variables"
 - Create variable “WEBOTS_HOME” with content “C:\Program Files\Webots”
 - Create variable “PYTHONPATH” with content “%WEBOTS_HOME%/lib/controller/python3X”
-  - WARNING: in the documentation says to use ${WEBOTS_HOME}, but doesn’t work
-- Change the last “X” for the minor revision number of your Python version
+  - Note: Change the last “X” for the minor revision number of your Python version
 - Add to “Path”
-  -  “%WEBOTS_HOME%\lib\controller”
+  - “%WEBOTS_HOME%\lib\controller”
   - “%WEBOTS_HOME%\msys64\mingw64\bin”
   - “%WEBOTS_HOME%\msys64\mingw64\bin\cpp”
-
-Create variable “PYTHONIOENCODING” with content “UTF-8”
+- Create variable “PYTHONIOENCODING” with content “UTF-8”
 
 ### Manual Installation Linux
-[Manual] Setup with Visual Studio Code:
-Prerequisites: we need to have installed Python and Visual Studio Code, you can find how to install those in the first video of the Python section
-Install the following Python libraries: numpy, opencv-python
-
+Install:
+- Python, execute `sudo apt-get install python3`
+- Visual Studio Code
+  - Download it [here](https://code.visualstudio.com/download) in Ubuntu download the ".deb" version
+  - If it gets stored in the Downloads folder install it with `sudo apt-get install ~/Downloads/code_*.deb`
 
 To set up the environment variables, open a terminal and run the following commands:
 ```
