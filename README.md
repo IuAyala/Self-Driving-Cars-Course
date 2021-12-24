@@ -95,3 +95,13 @@ Set the required environment variables
 - Create variable “PYTHONIOENCODING” with content “UTF-8”
 
 Official documentation - [link](https://cyberbotics.com/doc/guide/using-your-ide?tab-language=python&tab-os=windows#pycharm)
+
+# Usage
+Each section has a set of files, the ones that have leading numbers (i.e. 1_, 2_, ...) are the ones that should be executed, in the order marked by the leading numbers.
+
+Some of them require some preparation (i.e. run Webots simulator, download dataset):
+- **1_python_tutorial**: doesn't require anything
+- **2_computer_vision**: requires Webots (words/city.wbt)
+- **3_collision_avoidance**: requires Webots (worlds/city_with_borders.wbt)
+- **4_machine_learning**: requires to download the [dataset](https://www.kaggle.com/andrewmvd/road-sign-detection) and save it to the "4_machine_learning/original_dataset" folder, add the folers "images/" and "annotations/" inside the "original_datatset" folder
+- **5_behavioural_cloning**: requires Webots (words/city.wbt)
