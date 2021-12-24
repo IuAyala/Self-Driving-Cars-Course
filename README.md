@@ -76,15 +76,10 @@ Install:
 - [Visual Studio Code](https://code.visualstudio.com/download)
 
 Install the required Python libraries:
-- If you have "git bash" installed, open it and write:
+- Open "git bash", execute:
   ```
   cd ~/Code/Self-Driving-Cars-Course/0_installation
   pip3 install -r requirements.txt
-  ```
-- Otherwise open a "Windows Power Shell" and type:
-  ```
-  cd C:/Code/Self-Driving-Cars-Course/0_installation
-  python.exe -m pip install -r requirments.txt
   ```
 
 Set the required environment variables
