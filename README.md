@@ -54,7 +54,8 @@ Install:
 To set up the environment variables, open a terminal and run the following commands:
 ```
 echo "export LD_LIBRARY_PATH=/usr/local/webots/lib/controller" >> ~/.bashrc 
-echo "export PYTHONPATH=/usr/local/webots/lib/controller/python3X >> ~/.bashrc # WARNING: change the "X" for your python version, you can find it by running "python3 --version" in the terminal
+# WARNING: change the "X" for your python version, you can find it by running "python3 --version" in the terminal
+echo "export PYTHONPATH=/usr/local/webots/lib/controller/python3X >> ~/.bashrc
 echo "export PYTHONIOENCODING=UTF-8" >> ~/.bashrc
 ```
 
