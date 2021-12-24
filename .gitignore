@@ -1,11 +1,10 @@
 # Dataset
-original_dataset/annotations/
-original_dataset/images/
 modified_dataset/
 annotations/
 features/
-images/
 models/
+images/
+annotations/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

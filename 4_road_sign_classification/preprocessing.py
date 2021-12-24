@@ -13,10 +13,11 @@ import pickle
 
 # Prameters
 SEED = 123  # for reprducibility
-ANNOTATIONS_FOLDER = Path("original_dataset/annotations")
-IMAGES_FOLDER = Path("original_dataset/images")
-FEATURES_FOLDER = Path("features")
-MODIFIED_DATASET_FOLDER = Path("modified_dataset")
+DATASET_FOLDER = Path(__file__).parent / "original_dataset"
+ANNOTATIONS_FOLDER = DATASET_FOLDER / "annotations"
+IMAGES_FOLDER = DATASET_FOLDER / "images"
+FEATURES_FOLDER = Path(__file__).parent / "features"
+MODIFIED_DATASET_FOLDER = Path(__file__).parent / "modified_dataset"
 STANDARD_SHAPE = (100, 100)
 MIN_SIDE = 20  # if one side is smaller than this, the image will be discarded
 
@@ -161,8 +162,8 @@ def read_dataset(overwrite=False, standar_size=True, store_images=True):
 
 def get_dataset(recompute=False):
     # Check if already has been generated
-    dataset_file = "modified_dataset/dataset.pickle"
-    if Path(dataset_file).exists() and not recompute:
+    dataset_file = MODIFIED_DATASET_FOLDER / "dataset.pickle"
+    if dataset_file.exists() and not recompute:
         print("INFO: modified dataset already created")
         with open(dataset_file, "rb") as file:
             X, y = pickle.load(file)
