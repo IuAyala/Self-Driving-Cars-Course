@@ -1,5 +1,6 @@
 # Dataset
-original_dataset/
+original_dataset/annotations/
+original_dataset/images/
 modified_dataset/
 annotations/
 features/
