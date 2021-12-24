@@ -34,7 +34,7 @@ sudo snap install webots
 
 Official documentation - [link](https://cyberbotics.com/doc/guide/installation-procedure#installation-on-linux)
 
-### **Automated** installation of the rest (Python, Visual Studio Code, Python Libraries, Environment Variables) - Linux
+### Automated installation of the rest (Python, Visual Studio Code, Python Libraries, Environment Variables) - Linux
 
 You can install everything necessary in *Linux* by executing the following on a terminal.
 ```
@@ -44,7 +44,7 @@ cd ~/Code/Self-Driving-Cars-Course/0_install # set the right path, this will wor
 
 Note: This method should work for: Ubuntu, Fedora, Arch-based distros
 
-### **Manual** installation of the rest (Python, Visual Studio Code, Python Libraries, Environment Variables) - Linux
+### Manual installation of the rest (Python, Visual Studio Code, Python Libraries, Environment Variables) - Linux
 Install:
 - Python, execute `sudo apt-get install python3`
 - Visual Studio Code
@@ -69,7 +69,7 @@ Official documentation - [link](https://cyberbotics.com/doc/guide/using-your-ide
 
 Official documentation - [link](https://cyberbotics.com/doc/guide/installation-procedure#installation-on-windows)
 
-### **Manual** Installation - Windows
+### Manual Installation - Windows
 Install:
 - [Python](https://www.python.org/downloads/)
   - Make sure you tick "Add Python 3.X to PATH"
