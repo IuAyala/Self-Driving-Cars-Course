@@ -16,7 +16,6 @@ SEED = 123  # for reprducibility
 DATASET_FOLDER = Path(__file__).parent / "original_dataset"
 ANNOTATIONS_FOLDER = DATASET_FOLDER / "annotations"
 IMAGES_FOLDER = DATASET_FOLDER / "images"
-FEATURES_FOLDER = Path(__file__).parent / "features"
 MODIFIED_DATASET_FOLDER = Path(__file__).parent / "modified_dataset"
 STANDARD_SHAPE = (100, 100)
 MIN_SIDE = 20  # if one side is smaller than this, the image will be discarded
@@ -94,12 +93,9 @@ def read_dataset(overwrite=False, standar_size=True, store_images=True):
     # Annotation files list
     annotation_files = [f for f in ANNOTATIONS_FOLDER.iterdir() if f.is_file()]
 
-    if overwrite:
-        os.remove(FEATURES_FOLDER)
-
-    # Create features folder if doesn't exist
-    FEATURES_FOLDER.mkdir(parents=True, exist_ok=True)
     cropped_images_folder = MODIFIED_DATASET_FOLDER / "cropped_images"
+    if overwrite and cropped_images_folder.exists():
+        os.remove(cropped_images_folder)
     cropped_images_folder.mkdir(parents=True, exist_ok=True)
 
     X = []
