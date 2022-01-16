@@ -1,6 +1,10 @@
-# Python Section
-This section contains the Python files used for the video lectures.
+# Installation Section
+This section contains code for installation
 
 # TODO:
-- Have a look at the Python code, learn as much as possible
-- Try it for yourself! (in the Jupyter files *.ipynb) change the code and ensure that it does what you expect
+- If you are in Linux and you want to use the automatic installation run:
+```
+cd ~/Code/Self-Driving-Cars-Course
+./install_linux.sh
+```
+- Otherwise (you are on Windows/MacOS or you don't want the automated installation) go back to the main page of root of this repository and follow the installation instructions that you will find there
