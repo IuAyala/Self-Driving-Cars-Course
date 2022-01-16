@@ -25,6 +25,18 @@ def main():
         # Get point cloud
         raw_range_image = lidar.getRangeImage()  # only one layer
 
+        # TODO: remove everything between START & END: YOUR CODE
+        # TODO: use the "raw_range_iamge" which contains a list of collision 
+        # distance for each angle (i.e. [1.0, 2.0, 3.0]) would say:
+        # there is an object 1.0 meters to the left of the vehicle (-90º)
+        # there is an object 2.0 meters in front of the vehicle (0º)
+        # there is an object 1.0 meters to the right of the vehicle (90º)
+        # there are more values in actual variable but split the reading from -90º to +90º degrees
+        # if 0º is going forward, those will be evently spaced
+        # TODO: create a variable "angle" which defines the direction that the car
+        # should follow, 0 --> straight, -0.1 --> a bit to the left, 0.1 a bit to the right 
+        # ---------------------- START: YOUR CODE ----------------------------
+
         # Create range image
         range_image = np.zeros((64, 128), dtype=np.uint8)
         for i, range in enumerate(raw_range_image):
@@ -86,9 +98,7 @@ def main():
         )
         display_th.imagePaste(image_ref, 0, 0)
 
-        ### YOUR CODE
-        # TODO: Set value of "angle"
-        ### END YOUR CODE
+        # ---------------------- END: YOUR CODE ----------------------------
 
         robot.setSteeringAngle(angle)
         robot.setCruisingSpeed(40)
