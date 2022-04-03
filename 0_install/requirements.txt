@@ -5,6 +5,7 @@ opencv-python
 matplotlib
 pycodestyle
 toml
+inputs
 ipykernel
 jupyter
 keras
@@ -14,6 +15,7 @@ tensorboard
 mypy-extensions
 pandas
 Pillow
+pynput
 scikit-learn
 scikit-image
 imblearn
