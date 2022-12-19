@@ -1,21 +1,31 @@
 # Machine Learning Through Self-Driving Cars Expercises
 This repository stores code for the course: Machine Learning Through Self-Driving Cars
 
-# Sections
+# Index
+- [Course Sections](#course-sections)
+- [Installation](#installation)
+  - [Linux](#installation-linux)
+  - [Windows](#installation-windows)
+- [Usage](#usage)
+- [Contact](#contact)
+
+
+# Course Sections {#course-sections}
 - Python: code used for lectures (it's recommended to start from scratch)
 - Computer Vision: using the simulator Webots, we will make a car follow the road line
 - Machine Learning (Road Sign Classification): we will use Machine Learning to classify road signs (i.e. the model will be able to tell if the image contains a stop sign, speed limit sign, ...)
 - Collision Avoidance: Using a Lidar we will make make our car drive without crashing
 - Deep Learning (Behavioural Clonning): Using the power of Deep Neural Netowrks we will make the car drive like ourselves!
 
-# Installation
+# Installation {#installation}
 - Install Python
 - Install Visual Studio Code
 - Install Webots
 - Install Python libraries (can be found in 0_install/requirements.txt)
 - Add Envrionment Variables (PYTHONPATH, PYTHONDECODING, ...)
+**NOTE:** There are OS specific instructions (Windows & Linux)
 
-## Linux
+## Linux {#installation-linux}
 
 ### Install Webots
 Install on Debian-based systems (i.e. Ubuntu), open a terminal and paste the following commands (shortcut: Ctrl+Alt+T), then paste:
@@ -61,7 +71,7 @@ echo "export PYTHONIOENCODING=UTF-8" >> ~/.bashrc
 
 Official documentation - [link](https://cyberbotics.com/doc/guide/using-your-ide?tab-language=python&tab-os=linux#pycharm)
 
-## Windows
+## Windows {#installation-windows}
 
 ### Install Webots - Windows
 - Download the "webots-R2022a_setup.exe" installation file from their [website](https://cyberbotics.com/)
@@ -96,7 +106,7 @@ Set the required environment variables
 
 Official documentation - [link](https://cyberbotics.com/doc/guide/using-your-ide?tab-language=python&tab-os=windows#pycharm)
 
-# Usage
+# Usage {#usage}
 Each section has a set of files, the ones that have leading numbers (i.e. 1_, 2_, ...) are the ones that should be executed, in the order marked by the leading numbers.
 
 Some of them require some preparation (i.e. run Webots simulator, download dataset):
@@ -105,3 +115,8 @@ Some of them require some preparation (i.e. run Webots simulator, download datas
 - **3_collision_avoidance**: requires Webots (worlds/city_with_borders.wbt)
 - **4_machine_learning**: requires to download the [dataset](https://www.kaggle.com/andrewmvd/road-sign-detection) and save it to the "4_machine_learning/original_dataset" folder, add the folers "images/" and "annotations/" inside the "original_datatset" folder
 - **5_behavioural_cloning**: requires Webots (words/city.wbt)
+
+NOTE: When it requires any Webots world (.wbt) you can open it in Webots by clicking "File-->Open World".
+
+# Contact {#contact}
+If you have any problem with the code the best way to contact me is Udemy Q&A section. Leave your question there and I'll answer as soon as possible!
