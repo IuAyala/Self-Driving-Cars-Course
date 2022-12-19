@@ -1,5 +1,5 @@
-# Machine Learning Through Self-Driving Cars Expercises
-This repository stores code for the course: Machine Learning Through Self-Driving Cars
+# Machine Learning & Self-Driving Cars: Bootcamp with Python Exercises
+This repository stores code for the course: Machine Learning & Self-Driving Cars: Bootcamp with Python Exercises
 
 # Index
 - [Course Sections](#course-sections)
@@ -15,7 +15,7 @@ This repository stores code for the course: Machine Learning Through Self-Drivin
 - Computer Vision: using the simulator Webots, we will make a car follow the road line
 - Machine Learning (Road Sign Classification): we will use Machine Learning to classify road signs (i.e. the model will be able to tell if the image contains a stop sign, speed limit sign, ...)
 - Collision Avoidance: Using a Lidar we will make make our car drive without crashing
-- Deep Learning (Behavioural Clonning): Using the power of Deep Neural Netowrks we will make the car drive like ourselves!
+- Deep Learning (Behavioural Clonning): Using the power of Deep Neural Networks we will make the car drive like ourselves!
 
 # Installation
 - Install Python
@@ -113,7 +113,7 @@ Some of them require some preparation (i.e. run Webots simulator, download datas
 - **1_python_tutorial**: doesn't require anything
 - **2_computer_vision**: requires Webots (words/city.wbt)
 - **3_collision_avoidance**: requires Webots (worlds/city_with_borders.wbt)
-- **4_machine_learning**: requires to download the [dataset](https://www.kaggle.com/andrewmvd/road-sign-detection) and save it to the "4_machine_learning/original_dataset" folder, add the folers "images/" and "annotations/" inside the "original_datatset" folder
+- **4_machine_learning**: requires to download the [dataset](https://www.kaggle.com/andrewmvd/road-sign-detection) and save it to the "4_machine_learning/original_dataset" folder, add the folders "images/" and "annotations/" inside the "original_datatset" folder
 - **5_behavioural_cloning**: requires Webots (words/city.wbt)
 
 NOTE: When it requires any Webots world (.wbt) you can open it in Webots by clicking "File-->Open World".
