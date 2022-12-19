@@ -10,7 +10,7 @@ This repository stores code for the course: Machine Learning Through Self-Drivin
 - [Contact](#contact)
 
 
-# Course Sections {#course-sections}
+# Course Sections{#course-sections}
 - Python: code used for lectures (it's recommended to start from scratch)
 - Computer Vision: using the simulator Webots, we will make a car follow the road line
 - Machine Learning (Road Sign Classification): we will use Machine Learning to classify road signs (i.e. the model will be able to tell if the image contains a stop sign, speed limit sign, ...)
