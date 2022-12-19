@@ -4,8 +4,8 @@ This repository stores code for the course: Machine Learning Through Self-Drivin
 # Index
 - [Course Sections](#course-sections)
 - [Installation](#installation)
-  - [Linux](#installation-linux)
-  - [Windows](#installation-windows)
+  - [Linux](#linux)
+  - [Windows](#windows)
 - [Usage](#usage)
 - [Contact](#contact)
 
@@ -71,7 +71,7 @@ echo "export PYTHONIOENCODING=UTF-8" >> ~/.bashrc
 
 Official documentation - [link](https://cyberbotics.com/doc/guide/using-your-ide?tab-language=python&tab-os=linux#pycharm)
 
-## Windows {#installation-windows}
+## Windows
 
 ### Install Webots - Windows
 - Download the "webots-R2022a_setup.exe" installation file from their [website](https://cyberbotics.com/)
@@ -106,7 +106,7 @@ Set the required environment variables
 
 Official documentation - [link](https://cyberbotics.com/doc/guide/using-your-ide?tab-language=python&tab-os=windows#pycharm)
 
-# Usage {#usage}
+# Usage
 Each section has a set of files, the ones that have leading numbers (i.e. 1_, 2_, ...) are the ones that should be executed, in the order marked by the leading numbers.
 
 Some of them require some preparation (i.e. run Webots simulator, download dataset):
@@ -118,5 +118,5 @@ Some of them require some preparation (i.e. run Webots simulator, download datas
 
 NOTE: When it requires any Webots world (.wbt) you can open it in Webots by clicking "File-->Open World".
 
-# Contact {#contact}
+# Contact
 If you have any problem with the code the best way to contact me is Udemy Q&A section. Leave your question there and I'll answer as soon as possible!
