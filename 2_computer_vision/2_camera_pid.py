@@ -11,10 +11,10 @@ def main():
     # Create the Robot instance.
     robot = Car()
 
-    # Get the time step of the current vworld.
+    # Get the time step of the current world.
     timestep = int(robot.getBasicTimeStep())
 
-    # Create camear instance
+    # Create camera instance
     camera = robot.getDevice("camera")
     camera.enable(timestep)  # timestep
 
