@@ -25,7 +25,7 @@ This repository stores code for the course: Machine Learning Through Self-Drivin
 - Add Envrionment Variables (PYTHONPATH, PYTHONDECODING, ...)
 **NOTE:** There are OS specific instructions (Windows & Linux)
 
-## Linux {#installation-linux}
+## Linux
 
 ### Install Webots
 Install on Debian-based systems (i.e. Ubuntu), open a terminal and paste the following commands (shortcut: Ctrl+Alt+T), then paste:
