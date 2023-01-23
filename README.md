@@ -63,11 +63,22 @@ Install:
 
 To set up the environment variables, open a terminal and run the following commands:
 ```
-echo "export LD_LIBRARY_PATH=/usr/local/webots/lib/controller" >> ~/.bashrc 
-# WARNING: change the "X" for your python version, you can find it by running "python3 --version" in the terminal
-echo "export PYTHONPATH=/usr/local/webots/lib/controller/python3X >> ~/.bashrc
+echo "export WEBOTS_HOME=/usr/local/webots" >> ~/.bashrc
+echo "WEBOTS_PYTHON=${WEBOTS_HOME}/lib/controller/python" >> ~/.bashrc
+echo "export PYTHONPATH=${PYTHONPATH:+${PYTHONPATH}:}${WEBOTS_PYTHON}" >> ~/.bashrc
 echo "export PYTHONIOENCODING=UTF-8" >> ~/.bashrc
+echo "export LD_LIBRARY_PATH=${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}:}${WEBOTS_HOME}/lib/controller" >> ~/.bashrc
 ```
+
+Validate intallation, run the following command:
+```
+PYTHONPATH=$(echo $PYTHONPATH | tr ':' '\n')
+last_element=$(tail -n 1 <<< "$PYTHONPATH")
+ls ${last_element}/controller/robot.py
+```
+Should output something like:
+`/usr/local/webots/lib/controller/python/controller/robot.py`
+Otherwise your Python won't have access to the Webots library. If you get something like `ls: cannot acces...` then you need to make sure that the paths you entered are present in your machine (feel free to contact the repo owner if you are having issues with that).
 
 Official documentation - [link](https://cyberbotics.com/doc/guide/using-your-ide?tab-language=python&tab-os=linux#pycharm)
 
