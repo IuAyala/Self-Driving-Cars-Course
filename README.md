@@ -1,5 +1,5 @@
 # Machine Learning & Self-Driving Cars: Bootcamp with Python Exercises
-This repository stores code for the course: Machine Learning & Self-Driving Cars: Bootcamp with Python Exercises
+This repository stores code for the course: Machine Learning & Self-Driving Cars: Bootcamp with Python Exercises - [Get Lectures](https://gradientinsight.com/learning/)
 
 # Index
 - [Course Sections](#course-sections)
