@@ -28,7 +28,7 @@ def main():
         raw_range_image = lidar.getRangeImage()  # only one layer
 
         # TODO: remove everything between START & END: YOUR CODE
-        # TODO: use the "raw_range_iamge" which contains a list of collision
+        # TODO: use the "raw_range_image" which contains a list of collision
         # distance for each angle (i.e. [1.0, 2.0, 3.0]) would say:
         # there is an object 1.0 meters to the left of the vehicle (-90º)
         # there is an object 2.0 meters in front of the vehicle (0º)
