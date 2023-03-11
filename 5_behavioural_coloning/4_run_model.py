@@ -2,6 +2,7 @@
 Uses trained model to drive the vehicle automatically"""
 
 from vehicle import Car
+from vehicle import Driver
 import tensorflow as tf
 import time
 from pathlib import Path
@@ -42,6 +43,7 @@ def image_to_angle(model, image, gain=0.25):
 def main():
     # Create the Robot instance.
     robot = Car()
+    driver = Driver()
 
     # Get the time step of the current vworld.
     timestep = int(robot.getBasicTimeStep())
@@ -79,8 +81,8 @@ def main():
         if rightX != 0:
             angle = rightX * 0.25
 
-        robot.setSteeringAngle(angle)
-        robot.setCruisingSpeed(speed)
+        driver.setSteeringAngle(angle)
+        driver.setCruisingSpeed(speed)
 
         # Increase step
         step += 1

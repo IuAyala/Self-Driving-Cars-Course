@@ -4,6 +4,7 @@ import os
 import shutil
 import json
 from vehicle import Car
+from vehicle import Driver
 import driving_inputs
 from PIL import Image
 import utils
@@ -14,6 +15,7 @@ from pathlib import Path
 def main():
     # Create the Robot instance.
     robot = Car()
+    driver = Driver()
 
     # Get the time step of the current vworld.
     timestep = int(robot.getBasicTimeStep())
@@ -47,8 +49,8 @@ def main():
 
         print(f"throttle {throttle:.2f} - angle {angle:.2f}")
 
-        robot.setSteeringAngle(angle)
-        robot.setCruisingSpeed(throttle)
+        driver.setSteeringAngle(angle)
+        driver.setCruisingSpeed(throttle)
 
         # Don't save files if the vehcile is not moving
         if throttle == 0:

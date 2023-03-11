@@ -2,6 +2,7 @@
 
 from controller import Display
 from vehicle import Car
+from vehicle import Driver
 import numpy as np
 
 ROW_HIT = 32
@@ -10,6 +11,7 @@ ROW_HIT = 32
 def main():
     # Create the Robot instance.
     robot = Car()
+    driver = Driver()
 
     # Get the time step of the current vworld.
     timestep = int(robot.getBasicTimeStep())
@@ -26,7 +28,7 @@ def main():
         raw_range_image = lidar.getRangeImage()  # only one layer
 
         # TODO: remove everything between START & END: YOUR CODE
-        # TODO: use the "raw_range_iamge" which contains a list of collision 
+        # TODO: use the "raw_range_iamge" which contains a list of collision
         # distance for each angle (i.e. [1.0, 2.0, 3.0]) would say:
         # there is an object 1.0 meters to the left of the vehicle (-90º)
         # there is an object 2.0 meters in front of the vehicle (0º)
@@ -34,7 +36,7 @@ def main():
         # there are more values in actual variable but split the reading from -90º to +90º degrees
         # if 0º is going forward, those will be evently spaced
         # TODO: create a variable "angle" which defines the direction that the car
-        # should follow, 0 --> straight, -0.1 --> a bit to the left, 0.1 a bit to the right 
+        # should follow, 0 --> straight, -0.1 --> a bit to the left, 0.1 a bit to the right
         # ---------------------- START: YOUR CODE ----------------------------
 
         # Create range image
@@ -96,12 +98,12 @@ def main():
             width=range_image_rgb.shape[1],
             height=range_image_rgb.shape[0],
         )
-        display_th.imagePaste(image_ref, 0, 0)
+        display_th.imagePaste(image_ref, 0, 0, False)
 
         # ---------------------- END: YOUR CODE ----------------------------
 
-        robot.setSteeringAngle(angle)
-        robot.setCruisingSpeed(40)
+        driver.setSteeringAngle(angle)
+        driver.setCruisingSpeed(40)
 
 
 if __name__ == "__main__":

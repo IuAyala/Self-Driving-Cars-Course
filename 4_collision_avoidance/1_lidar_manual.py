@@ -2,6 +2,7 @@
 
 from controller import Display
 from vehicle import Car
+from vehicle import Driver
 import numpy as np
 import driving_inputs
 
@@ -10,6 +11,7 @@ import driving_inputs
 def main():
     # Create the Robot instance.
     robot = Car()
+    driver = Driver()
 
     # Get the time step of the current vworld.
     timestep = int(robot.getBasicTimeStep())
@@ -61,15 +63,15 @@ def main():
             width=range_image_rgb.shape[1],
             height=range_image_rgb.shape[0],
         )
-        display_th.imagePaste(image_ref, 0, 0)
+        display_th.imagePaste(image_ref, 0, 0, False)
 
         leftY, rightX = controller.y_x()
 
         speed = leftY * 45  # max speed
         angle = rightX * 0.25
 
-        robot.setSteeringAngle(angle)
-        robot.setCruisingSpeed(speed)
+        driver.setSteeringAngle(angle)
+        driver.setCruisingSpeed(speed)
 
 
 if __name__ == "__main__":
