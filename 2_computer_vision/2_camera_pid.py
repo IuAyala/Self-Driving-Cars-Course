@@ -2,6 +2,7 @@
 
 from controller import Display
 from vehicle import Car
+from vehicle import Driver
 import utils
 import numpy as np
 
@@ -10,6 +11,7 @@ import numpy as np
 def main():
     # Create the Robot instance.
     robot = Car()
+    driver = Driver()
 
     # Get the time step of the current world.
     timestep = int(robot.getBasicTimeStep())
@@ -43,8 +45,8 @@ def main():
 
         utils.display_binary_image(display_th, binary_image, average_column)
 
-        robot.setSteeringAngle(angle)
-        robot.setCruisingSpeed(50)
+        driver.setSteeringAngle(angle)
+        driver.setCruisingSpeed(50)
 
 
 if __name__ == "__main__":
