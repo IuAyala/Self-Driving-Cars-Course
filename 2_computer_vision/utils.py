@@ -100,7 +100,8 @@ def display_binary_image(display_th, binary_image, average_column):
         width=binary_image_gbra.shape[1],
         height=binary_image_gbra.shape[0],
     )
-    display_th.imagePaste(image_ref, 0, 0)
+    display_th.imagePaste(image_ref, 0, 0, False)
+    # NOTE: last argument is "blend" Flase is faster (just copy)
 
 
 if __name__ == "__main__":
