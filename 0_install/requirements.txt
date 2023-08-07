@@ -10,7 +10,7 @@ ipykernel
 jupyter
 keras
 tensorflow
-tensorflow-gpu
+#tensorflow-gpu
 tensorboard
 mypy-extensions
 pandas
