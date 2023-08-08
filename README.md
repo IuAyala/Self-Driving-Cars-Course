@@ -98,7 +98,7 @@ Official documentation - [link](https://cyberbotics.com/doc/guide/using-your-ide
 
 ### Install Webots - Windows
 
-- Download the "webots-R2022a_setup.exe" installation file from their [website](https://cyberbotics.com/)
+- Download the latest version of Webots (i.e. webots-R2023b_setup.exe) from the official [website](https://cyberbotics.com/)
 - Double click on this file
 - Follow the installation instructions
 
