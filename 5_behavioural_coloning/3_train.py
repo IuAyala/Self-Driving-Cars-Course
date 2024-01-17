@@ -66,6 +66,7 @@ if __name__ == "__main__":
     models_folder = current_folder / "models"
     logs_folder = current_folder / "logs"
 
+    print("Loading dataset ...")
     X_train, X_test, y_train, y_test = load_dataset(dataset_folder)
 
     X_train, X_valid, y_train, y_valid = train_test_split(
