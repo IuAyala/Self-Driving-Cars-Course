@@ -3,8 +3,6 @@ Uses trained model to drive the vehicle automatically"""
 
 from vehicle import Car
 from vehicle import Driver
-import tensorflow as tf
-import time
 from pathlib import Path
 import numpy as np
 import utils
